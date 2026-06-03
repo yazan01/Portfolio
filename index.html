@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yazan Maher Hamdan — Technical Lead, AI/ML Engineer, ERP Specialist & Full-Stack Developer. Architect of RYAI agentic AI platform and SentriX SOC." />
+  <meta name="author" content="Yazan Maher Hamdan" />
+  <meta name="theme-color" content="#05060a" />
+  <title>Yazan Hamdan — AI/ML Engineer & Technical Lead</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='monospace'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Animated particle network background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom glowing cursor -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Page loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <span>Y</span><span>H</span>
+    </div>
+    <div class="loader-bar"><span></span></div>
+    <p class="loader-text">Initializing<span class="dots"></span></p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-brand" aria-label="Home">
+      <span class="brand-mark">YH</span>
+      <span class="brand-pulse"></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-text="About">About</a>
+      <a href="#experience" data-text="Experience">Experience</a>
+      <a href="#skills" data-text="Skills">Skills</a>
+      <a href="#projects" data-text="Projects">Projects</a>
+      <a href="#research" data-text="Research">Research</a>
+      <a href="#contact" data-text="Contact">Contact</a>
+    </nav>
+    <a href="Yazan_Hamdan_CV.pdf" class="nav-cta" download>
+      <span>Resume</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-status reveal">
+          <span class="status-dot"></span>
+          Available for technical leadership roles
+        </div>
+        <h1 class="hero-title">
+          <span class="line reveal">Yazan</span>
+          <span class="line reveal gradient-text">Hamdan</span>
+        </h1>
+        <div class="hero-role reveal">
+          <span class="role-prefix">&gt;</span>
+          <span class="typed" id="typed"></span>
+          <span class="caret">_</span>
+        </div>
+        <p class="hero-desc reveal">
+          Technical Lead architecting <strong>production-grade agentic AI</strong> —
+          from RYAI's native ERPNext intelligence to the SentriX SOC platform.
+          I turn complex enterprise problems into scalable, intelligent systems.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-meta reveal">
+          <a href="mailto:yazan01mfh@gmail.com" class="meta-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> yazan01mfh@gmail.com</a>
+          <span class="meta-sep"></span>
+          <a href="tel:+962788596332" class="meta-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5a2 2 0 012-2h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2a2 2 0 01-2 2A16 16 0 013 5z"/></svg> +962 7 8859 6332</a>
+          <span class="meta-sep"></span>
+          <span class="meta-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Amman, Jordan</span>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Agentic AI</span><span>•</span><span>RAG Pipelines</span><span>•</span><span>ERPNext / Frappe</span><span>•</span><span>Multi-LLM Orchestration</span><span>•</span><span>FastAPI</span><span>•</span><span>React</span><span>•</span><span>Deep Learning</span><span>•</span><span>System Architecture</span><span>•</span>
+        <span>Agentic AI</span><span>•</span><span>RAG Pipelines</span><span>•</span><span>ERPNext / Frappe</span><span>•</span><span>Multi-LLM Orchestration</span><span>•</span><span>FastAPI</span><span>•</span><span>React</span><span>•</span><span>Deep Learning</span><span>•</span><span>System Architecture</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" id="stats">
+      <div class="stat reveal">
+        <div class="stat-num" data-target="12" data-suffix="">0</div>
+        <div class="stat-label">Major Projects Delivered</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="4" data-suffix="+">0</div>
+        <div class="stat-label">Years Building Software</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="3" data-suffix="">0</div>
+        <div class="stat-label">Production AI Platforms</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="1" data-suffix="">0</div>
+        <div class="stat-label">Published Research Paper</div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">
+            Results-driven <strong>Technical Lead</strong> with deep expertise across AI engineering,
+            enterprise ERP implementation, and full-stack development.
+          </p>
+          <p>
+            I architected and deployed <strong>RYAI</strong> — a production-grade, agentic AI platform
+            natively embedded in ERPNext, combining Retrieval-Augmented Generation, multi-LLM
+            orchestration, and intelligent document processing. I've shipped end-to-end products across
+            cybersecurity and web infrastructure, while leading cross-functional teams and translating
+            complex business requirements into scalable, enterprise-grade solutions.
+          </p>
+          <p>
+            A published researcher in machine learning and network security, I bridge rigorous
+            engineering with real-world delivery across financial services, HR, and industrial sectors.
+          </p>
+          <div class="about-tags">
+            <span>AI Engineering</span>
+            <span>Agentic Systems</span>
+            <span>ERPNext / Frappe</span>
+            <span>Full-Stack</span>
+            <span>Team Leadership</span>
+          </div>
+        </div>
+        <aside class="about-card reveal">
+          <div class="card-glow"></div>
+          <div class="profile-ring">
+            <div class="profile-initials">YH</div>
+          </div>
+          <h3>Yazan Maher Hamdan</h3>
+          <p class="profile-role">Technical Lead · AI/ML Engineer</p>
+          <ul class="profile-facts">
+            <li><span>Location</span><strong>Amman, Jordan</strong></li>
+            <li><span>Focus</span><strong>Agentic AI · ERP</strong></li>
+            <li><span>Degree</span><strong>BSc CIS (ABET)</strong></li>
+            <li><span>Status</span><strong class="ok">Open to opportunities</strong></li>
+          </ul>
+          <div class="profile-socials">
+            <a href="mailto:yazan01mfh@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+            <a href="tel:+962788596332" aria-label="Phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5a2 2 0 012-2h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2a2 2 0 01-2 2A16 16 0 013 5z"/></svg></a>
+            <a href="Yazan_Hamdan_CV.pdf" download aria-label="Download CV"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h3>Technical Lead</h3>
+              <span class="tl-date">Jan 2025 — Present</span>
+            </div>
+            <p class="tl-org">iValue Management Consulting</p>
+            <ul>
+              <li>Spearheaded architecture and end-to-end delivery of <strong>RYAI</strong>, a production agentic AI platform embedded in ERPNext — OpenAI tool-use RAG, multi-LLM support, semantic vector search, CV auto-extraction, and SPA field-level AI injection.</li>
+              <li>Led and mentored a cross-functional team across concurrent ERPNext engagements against technical quality standards and milestones.</li>
+              <li>Defined system architecture and served as primary technical advisor for key accounts and digital transformation roadmaps.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h3>IT Officer</h3>
+              <span class="tl-date">Apr 2024 — Dec 2024</span>
+            </div>
+            <p class="tl-org">iValue Management Consulting</p>
+            <ul>
+              <li>Designed custom Frappe applications including automated cost-distribution modules with integrated journal entry generation.</li>
+              <li>Engineered integrations with ZATCA, Microsoft Teams, and Zoom; built live BI dashboards on ERPNext data sources.</li>
+              <li>Ran stakeholder workshops, gap analysis, training programmes, and post-go-live support across deployments.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h3>Full-Stack Developer</h3>
+              <span class="tl-date">Dec 2023 — Mar 2024</span>
+            </div>
+            <p class="tl-org">Wasac Management Consulting</p>
+            <ul>
+              <li>Engineered custom ERP solutions end-to-end — scalable backend services, RESTful APIs, and responsive frontends in Python, C#, and JavaScript.</li>
+              <li>Translated business workflows into technical specs, user stories, and acceptance criteria; enforced security and code-review standards.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h3>Full-Stack Developer</h3>
+              <span class="tl-date">Aug 2023 — Dec 2023</span>
+            </div>
+            <p class="tl-org">Quality Business Solutions (QBS)</p>
+            <ul>
+              <li>Built a feature-complete e-commerce platform — catalogue management, secure auth, session cart, and transaction processing.</li>
+              <li>Delivered role-segmented Admin, User, and Guest dashboards; optimised performance and cross-device responsiveness.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Skills &amp; Stack</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">🧠</span><h3>AI &amp; Machine Learning</h3></div>
+          <div class="chips">
+            <span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span><span>OpenAI API</span><span>Hugging Face</span><span>LangFlow</span><span>YOLOv8/v9</span><span>CNN</span><span>GAN</span><span>Transfer Learning</span><span>SHAP</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">🔗</span><h3>NLP &amp; RAG</h3></div>
+          <div class="chips">
+            <span>RAG</span><span>HyDE</span><span>RRF Reranking</span><span>Semantic Search</span><span>Vector Embeddings</span><span>TF-IDF</span><span>Sentiment Analysis</span><span>Multi-LLM Orchestration</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">⚙️</span><h3>ERP &amp; Backend</h3></div>
+          <div class="chips">
+            <span>ERPNext</span><span>Frappe</span><span>FastAPI</span><span>Django</span><span>ASP.NET Core</span><span>REST APIs</span><span>Redis</span><span>Docker</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">💻</span><h3>Languages &amp; Web</h3></div>
+          <div class="chips">
+            <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>C#</span><span>Java</span><span>C++</span><span>PHP</span><span>React</span><span>Tailwind CSS</span><span>Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">🗄️</span><h3>Data &amp; Databases</h3></div>
+          <div class="chips">
+            <span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Oracle</span><span>SQLite</span><span>Pandas</span><span>NumPy</span><span>Power BI</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-head"><span class="skill-ico">🚀</span><h3>Leadership &amp; Delivery</h3></div>
+          <div class="chips">
+            <span>Technical Leadership</span><span>System Architecture</span><span>Agile / Scrum</span><span>Stakeholder Mgmt</span><span>Team Mentoring</span><span>Client Consulting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Selected Work</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="proj-filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="ai">AI / ML</button>
+        <button class="filter" data-filter="erp">ERP</button>
+        <button class="filter" data-filter="fullstack">Full-Stack</button>
+        <button class="filter" data-filter="security">Security</button>
+      </div>
+
+      <!-- Featured -->
+      <div class="featured-projects">
+        <article class="feat-card reveal" data-cat="ai erp">
+          <div class="feat-glow"></div>
+          <div class="feat-badge">Flagship</div>
+          <div class="feat-body">
+            <span class="feat-tag">Agentic AI Platform</span>
+            <h3>RYAI — Agentic AI for ERPNext</h3>
+            <p>A production-ready Frappe application bringing native agentic AI into ERPNext without external workflow dependencies. An OpenAI tool-use loop fuses live SQL execution with semantic vector search, HyDE query expansion, RRF reranking, incremental indexing, and semantic caching — plus intelligent CV parsing, multi-LLM support, Redis sessions, permission-aware SQL, and field-level AI text enhancement across all Long Text fields.</p>
+            <div class="feat-stack">
+              <span>Python</span><span>OpenAI API</span><span>Gemini</span><span>Ollama</span><span>Frappe/ERPNext</span><span>numpy</span><span>Redis</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feat-card reveal" data-cat="security ai fullstack">
+          <div class="feat-glow"></div>
+          <div class="feat-badge alt">Security</div>
+          <div class="feat-body">
+            <span class="feat-tag">SOC Platform</span>
+            <h3>SentriX — AI-Driven SOC</h3>
+            <p>A full-stack Security Operations Centre built from the ground up: real-time alert management with bulk actions, Kanban + list incident tracking, automated IOC enrichment (VirusTotal, AbuseIPDB), a configurable alert-rule engine with auto-escalation, and a RAG-based Virtual AI Analyst with live DB context. A companion device-monitor agent streams live alerts on suspicious processes, SSH brute-force, file-integrity violations, and more.</p>
+            <div class="feat-stack">
+              <span>FastAPI</span><span>SQLAlchemy</span><span>JWT</span><span>psutil</span><span>Chart.js</span><span>VirusTotal API</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Grid -->
+      <div class="proj-grid" id="projGrid">
+        <article class="proj-card reveal" data-cat="fullstack erp ai">
+          <div class="proj-card-top"><span class="proj-no">03</span><span class="proj-cat">Full-Stack</span></div>
+          <h3>Website Builder &amp; CMS</h3>
+          <p>Drag-and-drop website builder with draft/publish workflow, revision history, media library, and a JWT REST API. React + GrapesJS frontend with a custom block library and an auto-responsive engine that injects grid-collapse, flex-stack, and fluid typography at runtime.</p>
+          <div class="proj-stack"><span>FastAPI</span><span>React</span><span>GrapesJS</span><span>TypeScript</span><span>Docker</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai security">
+          <div class="proj-card-top"><span class="proj-no">04</span><span class="proj-cat">Research</span></div>
+          <h3>ML/DL Network Intrusion Detection</h3>
+          <p>Designed and evaluated MLP, Random Forest, and Logistic Model Trees for binary and multi-class intrusion detection. Applied SMOTE for class imbalance and Pearson correlation for feature selection on NSL-KDD and CIC-IDS-2017. <em>Published in IJAI (IAES Core).</em></p>
+          <div class="proj-stack"><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>Pandas</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai security">
+          <div class="proj-card-top"><span class="proj-no">05</span><span class="proj-cat">Explainable AI</span></div>
+          <h3>Explainable IDS with GANs</h3>
+          <p>Compared MLP and novel GAN architectures for multi-class attack classification on CIC-IDS 2017. Applied SHAP values and permutation importance to surface decision rationale and tackle interpretability in cybersecurity deep learning.</p>
+          <div class="proj-stack"><span>TensorFlow</span><span>SHAP</span><span>Keras</span><span>NumPy</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="erp">
+          <div class="proj-card-top"><span class="proj-no">06</span><span class="proj-cat">ERP / Finance</span></div>
+          <h3>Automated Cost Distribution</h3>
+          <p>An automated financial cost-allocation engine in ERPNext distributing payroll, benefits, and project costs by configurable contribution metrics and partner ratios — auto-generating journal entries and consolidated P&amp;L tracking across projects.</p>
+          <div class="proj-stack"><span>ERPNext</span><span>Frappe</span><span>Python</span><span>JavaScript</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai">
+          <div class="proj-card-top"><span class="proj-no">08</span><span class="proj-cat">Computer Vision</span></div>
+          <h3>Intelligent Seating Management</h3>
+          <p>A deep-learning image classifier identifying table occupancy and available seating across real-world environments. Curated a custom 5-category dataset and applied transfer learning with MobileNetV2 and InceptionV3 on constrained data.</p>
+          <div class="proj-stack"><span>TensorFlow</span><span>MobileNetV2</span><span>InceptionV3</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai">
+          <div class="proj-card-top"><span class="proj-no">09</span><span class="proj-cat">Object Detection</span></div>
+          <h3>University Furniture Recognition</h3>
+          <p>A real-time object-detection system localising tables and chairs in university environments. Curated and augmented a custom Roboflow dataset, then trained and benchmarked YOLOv8 vs YOLOv9 with mAP-based evaluation.</p>
+          <div class="proj-stack"><span>YOLOv8</span><span>YOLOv9</span><span>Roboflow</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai">
+          <div class="proj-card-top"><span class="proj-no">10</span><span class="proj-cat">Unsupervised ML</span></div>
+          <h3>Obesity Pattern Analysis</h3>
+          <p>Clustering analysis on behavioural and physiological data using K-Means and Hierarchical Clustering with PCA dimensionality reduction. Validated optimal clusters via the Elbow Method and Silhouette Analysis.</p>
+          <div class="proj-stack"><span>Scikit-learn</span><span>K-Means</span><span>PCA</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="ai">
+          <div class="proj-card-top"><span class="proj-no">11</span><span class="proj-cat">NLP</span></div>
+          <h3>Recipe Review Sentiment</h3>
+          <p>An end-to-end NLP pipeline for multi-class sentiment classification — lemmatization, stop-word removal, and TF-IDF vectorisation — benchmarking Logistic Regression against Multinomial Naive Bayes.</p>
+          <div class="proj-stack"><span>Scikit-learn</span><span>TF-IDF</span><span>NLP</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="fullstack">
+          <div class="proj-card-top"><span class="proj-no">12</span><span class="proj-cat">Full-Stack</span></div>
+          <h3>Quatro-P4 — E-commerce</h3>
+          <p>A full-featured e-commerce platform for pet-care products with dynamic catalogue browsing, advanced search/filtering, a session-managed cart, and role-based auth. Dedicated Admin, User, and Guest dashboards.</p>
+          <div class="proj-stack"><span>PHP</span><span>JavaScript</span><span>MySQL</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-cat="erp">
+          <div class="proj-card-top"><span class="proj-no">07</span><span class="proj-cat">Digital Transformation</span></div>
+          <h3>Fertilizer Industry Digitalisation</h3>
+          <p>A comprehensive digitalisation programme automating production monitoring, inventory management, and supply-chain reporting — introducing data-driven workflows and traceability across operations, logistics, and finance.</p>
+          <div class="proj-stack"><span>ERP</span><span>Automation</span><span>BI</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH & EDUCATION ============ -->
+    <section class="section" id="research">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title">Research &amp; Education</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="re-grid">
+        <a class="re-card pub reveal" href="https://ijai.iaescore.com/index.php/IJAI/article/view/27017/14858" target="_blank" rel="noopener">
+          <div class="re-tag">Published Paper · 2025</div>
+          <h3>Machine &amp; Deep Learning Classification for Binary and Multi-Class Network Intrusion Detection</h3>
+          <p>Hamdan, Y. (2025). <em>IJAI — Indonesian Journal of Electrical Engineering and Computer Science</em>, IAES Core.</p>
+          <span class="re-link">Read publication <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>
+        </a>
+        <div class="re-card edu reveal">
+          <div class="re-tag">Education</div>
+          <h3>BSc, Computer Information Systems</h3>
+          <p class="re-org">The Hashemite University · ABET Accredited</p>
+          <p class="re-meta">Oct 2019 — Oct 2023 · GPA: Good</p>
+          <p class="re-note">Senior Project: ML/DL classification for binary &amp; multi-class network intrusion detection — published in IJAI (IAES Core).</p>
+        </div>
+        <div class="re-card cert reveal">
+          <div class="re-tag">Certifications &amp; Training</div>
+          <div class="cert-list">
+            <span>Machine Learning &amp; AI</span>
+            <span>Deep Learning — Advanced</span>
+            <span>Django Web Framework</span>
+            <span>Microsoft SQL Server</span>
+            <span>Oracle DB Administration</span>
+            <span>Web Development (HTML/CSS/JS/PHP)</span>
+            <span>ASP.NET Core MVC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <span class="section-index center">06</span>
+        <h2 class="contact-title">Let's build something <span class="gradient-text">intelligent</span>.</h2>
+        <p class="contact-sub">
+          Open to technical leadership and AI engineering roles. Whether it's an agentic platform,
+          an ERP transformation, or a research-grade ML system — let's talk.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:yazan01mfh@gmail.com" class="btn btn-primary big">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span>yazan01mfh@gmail.com</span>
+          </a>
+          <a href="Yazan_Hamdan_CV.pdf" class="btn btn-ghost big" download>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+            <span>Download Résumé</span>
+          </a>
+        </div>
+        <div class="contact-links">
+          <a href="tel:+962788596332">+962 7 8859 6332</a>
+          <span>·</span>
+          <span>Amman, Jordan</span>
+          <span>·</span>
+          <span>Jordanian</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Yazan Maher Hamdan</span>
+    <span class="footer-built">Designed &amp; built with vanilla JS — no frameworks, all motion.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
